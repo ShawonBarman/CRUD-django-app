@@ -1,0 +1,3 @@
+username : admin123
+email : admin123@gmail.com
+password: admin123@

@@ -1,0 +1,38 @@
+{% extends 'crud/base.html' %}
+
+{% block title %}
+    CRUD | Update Info
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <div class="row">
+        <div class="col-sm-8 offest-2 center">
+            <h4 class="alert alert-info text-center">Update Student Information</h4>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input type="submit" class="btn btn-success first_btn" value="update">
+                <a href="{% url 'home' %}" class="btn btn-info second_btn">Back to home</a>
+            </form>
+        </div>
+    </div>
+    <style>
+        .center{
+            margin:0 auto;
+            border: 2px solid #d9dfe4;
+            border-radius: 10px;
+            background-color: #F0F8FF;
+        }
+        .row .center h4{
+            margin-top:1.4rem;
+        }
+        .first_btn, .second_btn{
+            width:30%;
+            margin-top:0.8rem;
+            margin-bottom:1.5rem;
+            border-radius: 50px;
+        }
+        .second_btn{float:right;}
+    </style>
+{% endblock content %}
